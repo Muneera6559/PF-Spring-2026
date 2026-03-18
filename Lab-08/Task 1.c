@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int marks[4][3] = {
+        {80, 75, 90},
+        {60, 70, 85},
+        {88, 92, 79},
+        {55, 65, 70}
+    }; 
+
+    for (int i = 0; i < 4; i++) {
+        int total = 0;
+        for (int j = 0; j < 3; j++) {
+            total += marks[i][j];
+        }
+        printf("Student %d Total: %d\n", i + 1, total);
+    }
+
+    for (int j = 0; j < 3; j++) {
+        float sum = 0;
+        for (int i = 0; i < 4; i++) {
+            sum += marks[i][j];
+        }
+        printf("Subject %d Average: %.2f\n", j + 1, sum / 4.0);
+    }
+    return 0;
+}
